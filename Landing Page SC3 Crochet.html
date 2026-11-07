@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SC3 Crochet | Accesorios Tejidos a Mano</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crochet: {
+                            50: '#fff9fa',
+                            100: '#ffedf1',
+                            200: '#ffd6e0',
+                            300: '#ffb3c6', // Soft Blush Pink
+                            400: '#ff85a1',
+                            500: '#f75c82',
+                            600: '#e03a65',
+                            700: '#bc264d',
+                            800: '#9b2243',
+                            900: '#83213c',
+                        },
+                        cream: {
+                            50: '#fdfbf7',
+                            100: '#f7f2ea',
+                            200: '#efe4d4', // Delicate Beige
+                            300: '#e2cfb8',
+                            400: '#d1b597',
+                            500: '#bd9a77',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .crochet-texture {
+            background-color: #fff9fa;
+            background-image: radial-gradient(#ffd6e0 0.8px, transparent 0.8px), radial-gradient(#ffd6e0 0.8px, #fff9fa 0.8px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+        .hero-pink-gradient {
+            background: linear-gradient(135deg, #fff9fa 0%, #ffedf1 50%, #efe4d4 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-crochet-50 antialiased selection:bg-crochet-200 selection:text-crochet-900">
+
+    <!-- Header / Nav -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-crochet-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-crochet-300 text-crochet-900 flex items-center justify-center font-serif text-xl font-bold shadow-sm group-hover:bg-crochet-400 transition-colors">
+                        S
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold text-gray-900 tracking-wide block leading-none">SC3 <span class="text-crochet-500">Crochet</span></span>
+                        <span class="text-[10px] font-semibold tracking-widest text-gray-500 uppercase block">Tejidos hechos a mano</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-crochet-500 font-medium transition-colors">Inicio</a>
+                    <a href="#catalogo" class="text-gray-700 hover:text-crochet-500 font-medium transition-colors">Catálogo Real</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-crochet-500 font-medium transition-colors">Sobre la Marca</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-crochet-500 font-medium transition-colors">Contacto</a>
+                </nav>
+
+                <!-- WhatsApp Call Action Desktop -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/573000000000?text=Hola!%20Me%20encantaron%20tus%20accesorios%20de%20SC3%20Crochet." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-sm hover:shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir por WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-crochet-100 focus:outline-none" aria-label="Abrir Menú">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-crochet-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-crochet-500 hover:bg-crochet-50">Inicio</a>
+            <a href="#catalogo" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-crochet-500 hover:bg-crochet-50">Catálogo Real</a>
+            <a href="#nosotros" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-crochet-500 hover:bg-crochet-50">Sobre la Marca</a>
+            <a href="#contacto" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-crochet-500 hover:bg-crochet-50">Contacto</a>
+            <div class="pt-2">
+                <a href="https://wa.me/573000000000?text=Hola!%20Me%20encantaron%20tus%20accesorios%20de%20SC3%20Crochet." target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3 rounded-xl font-medium text-sm transition-all">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Contactar por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative overflow-hidden hero-pink-gradient py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Hero Content -->
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm text-crochet-700 text-xs font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full border border-crochet-200 shadow-sm">
+                        <i class="fa-solid fa-heart text-crochet-400 text-xs"></i> Piezas Exclusivas de Tejido
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Elegancia y ternura tejida a mano en <span class="text-crochet-500">SC3 Crochet</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 font-normal max-w-xl mx-auto md:mx-0">
+                        Descubre nuestras diademas de flores caladas, turbantes cruzados y gorros artesanales confeccionados con dedicación, suavidad y diseños únicos en tonos rosa, blanco y beige.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                        <a href="#catalogo" class="inline-flex items-center justify-center gap-2 bg-crochet-400 hover:bg-crochet-500 text-white px-8 py-4 rounded-full font-medium text-base shadow-lg shadow-crochet-300/50 transition-all transform hover:-translate-y-0.5">
+                            <span>Ver Catálogo Real</span>
+                            <i class="fa-solid fa-sparkles text-sm"></i>
+                        </a>
+                        <a href="https://wa.me/573000000000?text=Hola!%20Deseo%20hacer%20un%20pedido%20personalizado." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-800 border border-crochet-200 px-8 py-4 rounded-full font-medium text-base shadow-sm hover:shadow transition-all">
+                            <i class="fa-brands fa-whatsapp text-emerald-500 text-lg"></i>
+                            <span>Pedir por Encargo</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Illustration Card -->
+                <div class="relative flex justify-center">
+                    <div class="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-white p-6 flex flex-col items-center justify-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-crochet-100 text-crochet-500 flex items-center justify-center mb-4 text-4xl shadow-inner">
+                            <i class="fa-solid fa-ribbon"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold text-gray-900">Diademas & Turbantes</h3>
+                        <p class="text-sm text-gray-500 mt-2">Detalles florales tejidos, ajuste elástico cómodo y tonos pastel delicados.</p>
+                        <span class="mt-4 inline-block bg-cream-200 text-crochet-800 text-xs font-semibold px-4 py-1.5 rounded-full">Hecho a mano en Colombia</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section with REAL PRODUCTS -->
+    <section id="catalogo" class="py-20 crochet-texture">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Title -->
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-crochet-500 mb-2">Diseños Reales</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">Catálogo de Productos SC3 Crochet</p>
+                <div class="w-16 h-1 bg-crochet-300 mx-auto mt-4 rounded-full"></div>
+                <p class="text-gray-600 mt-4 text-sm sm:text-base">Selecciona tu producto favorito de nuestro taller y pízalo directo por WhatsApp.</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10">
+                <button onclick="filterCategory('todos')" class="filter-btn active bg-crochet-400 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-sm">Todos</button>
+                <button onclick="filterCategory('diademas')" class="filter-btn bg-white hover:bg-crochet-100 text-gray-700 px-5 py-2 rounded-full text-sm font-medium transition-all border border-crochet-200">Diademas</button>
+                <button onclick="filterCategory('turbantes')" class="filter-btn bg-white hover:bg-crochet-100 text-gray-700 px-5 py-2 rounded-full text-sm font-medium transition-all border border-crochet-200">Turbantes</button>
+                <button onclick="filterCategory('gorros')" class="filter-btn bg-white hover:bg-crochet-100 text-gray-700 px-5 py-2 rounded-full text-sm font-medium transition-all border border-crochet-200">Gorros y Boinas</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Real products generated via JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <div class="space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-crochet-500">Amor por los Hilos</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900">Sobre SC3 Crochet</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        En **SC3 Crochet** elaboramos prendas y accesorios que transmiten delicadeza, ternura y estilo. Cada diademas con flores tejidas punto por punto y cada turbante con acabado elástico están pensados para acompañarte cómodamente en tu día a día.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-crochet-50 border border-crochet-100">
+                            <i class="fa-solid fa-heart text-crochet-400 text-xl mb-2"></i>
+                            <h4 class="font-bold text-gray-900 text-sm">100% Artesanal</h4>
+                            <p class="text-xs text-gray-500">Cada punto hecho a mano con amor.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-cream-50 border border-cream-200">
+                            <i class="fa-solid fa-feather text-cream-500 text-xl mb-2"></i>
+                            <h4 class="font-bold text-gray-900 text-sm">Materiales Suaves</h4>
+                            <p class="text-xs text-gray-500">Hilos delicados que no causan molestias.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-crochet-100/50 p-8 rounded-3xl border border-crochet-200 text-center">
+                    <div class="w-16 h-16 mx-auto rounded-full bg-white text-crochet-500 flex items-center justify-center text-2xl shadow-sm mb-4">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-gray-900 mb-2">¿Quieres personalizar tu accesorio?</h3>
+                    <p class="text-sm text-gray-600 mb-6">Podemos tejer tus diademas o turbantes en los colores que más te gusten: rosa, blanco, beige, negro o combinaciones personalizadas.</p>
+                    <a href="https://wa.me/573000000000?text=Hola!%20Quiero%20solicitar%20un%20diseño%20personalizado%20en%20SC3%20Crochet." target="_blank" class="inline-flex items-center gap-2 bg-crochet-400 hover:bg-crochet-500 text-white font-medium px-6 py-3 rounded-full text-sm transition-all shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Solicitar Combinación Personalizada</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-crochet-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-xs font-bold uppercase tracking-widest text-crochet-500">Contacto</span>
+            <h2 class="font-serif text-3xl font-bold text-gray-900 mt-2 mb-4">Haz tu pedido directo en SC3 Crochet</h2>
+            <p class="text-gray-600 mb-8 max-w-lg mx-auto">Atendemos todas las consultas y pedidos de forma personalizada a través de WhatsApp e Instagram.</p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/573000000000" target="_blank" class="flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-medium shadow-md transition-all">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <div class="text-left">
+                        <p class="text-xs opacity-90">WhatsApp Directo</p>
+                        <p class="font-bold">+57 300 000 0000</p>
+                    </div>
+                </a>
+
+                <a href="https://instagram.com" target="_blank" class="flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-gray-800 border border-crochet-200 px-8 py-4 rounded-2xl font-medium shadow-sm transition-all">
+                    <i class="fa-brands fa-instagram text-2xl text-crochet-500"></i>
+                    <div class="text-left">
+                        <p class="text-xs text-gray-500">Instagram</p>
+                        <p class="font-bold text-gray-900">@sc3_crochet</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-crochet-200 py-8 text-center text-xs text-gray-500">
+        <p>&copy; <span id="year"></span> SC3 Crochet. Todos los derechos reservados. Hecho a mano con amor.</p>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-content">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Section -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // REAL PRODUCTS DATA FROM YOUR PHOTOS
+        const products = [
+            {
+                id: 1,
+                name: "Diadema Flores Caladas Rosa Pastel",
+                category: "diademas",
+                price: 28000,
+                description: "Banda / Diadema para el cabello tejida en crochet fino tono rosa pastel con delicado patrón de flor calada y elástico posterior ajustable para perfecto soporte.",
+                tag: "Producto Real",
+                bgColor: "#ffd6e0",
+                iconClass: "fa-flower"
+            },
+            {
+                id: 2,
+                name: "Turbante Cruzado Bicolor (Beige & Rosa)",
+                category: "turbantes",
+                price: 35000,
+                description: "Diadema estilo turbante tejido a mano en punto elástico con diseño cruzado al frente. Combinación suave de tonos neutros beige y rosa claro.",
+                tag: "Producto Real",
+                bgColor: "#efe4d4",
+                iconClass: "fa-ribbon"
+            },
+            {
+                id: 3,
+                name: "Diadema Blanca con Flor Negra",
+                category: "diademas",
+                price: 30000,
+                description: "Banda para el cabello en tejido cerrado color blanco impoluto decorada con una elegante flor de crochet negra en relieve superpuesta.",
+                tag: "Producto Real",
+                bgColor: "#ffedf1",
+                iconClass: "fa-rose"
+            },
+            {
+                id: 4,
+                name: "Boina Roja de Crochet con Pompon Negro",
+                category: "gorros",
+                price: 45000,
+                description: "Gorro estilo boina tejida en tono rojo vivo con pretina en tejido negro acentuado y pompón suave de piel sintética negra en la coronilla.",
+                tag: "Producto Real",
+                bgColor: "#ffd6e0",
+                iconClass: "fa-hat-cowboy"
+            },
+            {
+                id: 5,
+                name: "Turbante Cruzado Negro Clásico",
+                category: "turbantes",
+                price: 32000,
+                description: "Turbante elástico con nudo cruzado frontal tejido en estambre negro de máxima textura y abrigo.",
+                tag: "Producto Real",
+                bgColor: "#efe4d4",
+                iconClass: "fa-gem"
+            }
+        ];
+
+        function formatCOP(amount) {
+            return new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(amount);
+        }
+
+        function renderProducts(items) {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            items.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-crochet-200 flex flex-col justify-between group";
+                
+                const whatsappMsg = encodeURIComponent(`Hola SC3 Crochet! Quisiera pedir la: *${product.name}* (${formatCOP(product.price)}).`);
+                const whatsappUrl = `https://wa.me/573000000000?text=${whatsappMsg}`;
+
+                card.innerHTML = `
+                    <div>
+                        <div class="h-48 p-6 flex items-center justify-center relative" style="background-color: ${product.bgColor}">
+                            <span class="absolute top-3 left-3 bg-white/90 text-crochet-700 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-sm">
+                                ${product.tag}
+                            </span>
+                            <div class="w-20 h-20 rounded-full bg-white/60 flex items-center justify-center text-crochet-500 text-3xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid ${product.iconClass || 'fa-heart'}"></i>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-serif text-lg font-bold text-gray-900 mb-2">${product.name}</h3>
+                            <p class="text-xs text-gray-500 mb-4">${product.description}</p>
+                            <p class="text-lg font-bold text-crochet-600">${formatCOP(product.price)}</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0 flex gap-2">
+                        <button onclick="openModal(${product.id})" class="flex-1 bg-crochet-100 hover:bg-crochet-200 text-crochet-900 font-medium py-2.5 rounded-xl text-xs transition-colors">
+                            Ver Detalles
+                        </button>
+                        <a href="${whatsappUrl}" target="_blank" class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl text-xs text-center transition-colors flex items-center justify-center gap-1">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>Pedir</span>
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-crochet-400', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+
+            event.target.classList.remove('bg-white', 'text-gray-700');
+            event.target.classList.add('bg-crochet-400', 'text-white');
+
+            if (category === 'todos') {
+                renderProducts(products);
+            } else {
+                renderProducts(products.filter(p => p.category === category));
+            }
+        }
+
+        function openModal(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+
+            const whatsappMsg = encodeURIComponent(`Hola SC3 Crochet! Quiero comprar el producto: *${product.name}* (${formatCOP(product.price)}).`);
+            const whatsappUrl = `https://wa.me/573000000000?text=${whatsappMsg}`;
+
+            document.getElementById('modal-content').innerHTML = `
+                <div class="p-6 text-center" style="background-color: ${product.bgColor}">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-white/70 flex items-center justify-center text-crochet-500 text-3xl mb-2">
+                        <i class="fa-solid ${product.iconClass || 'fa-heart'}"></i>
+                    </div>
+                    <span class="bg-white text-crochet-800 text-xs font-bold px-3 py-1 rounded-full">${product.tag}</span>
+                </div>
+                <div class="p-6 space-y-4">
+                    <h3 class="font-serif text-xl font-bold text-gray-900">${product.name}</h3>
+                    <p class="text-xl font-bold text-crochet-600">${formatCOP(product.price)}</p>
+                    <p class="text-xs text-gray-600 leading-relaxed">${product.description}</p>
+                    
+                    <div class="bg-crochet-50 p-3 rounded-xl border border-crochet-100 text-xs text-gray-700 space-y-1">
+                        <p><i class="fa-solid fa-check text-emerald-500 mr-1"></i> Elástico ajustable incorporado.</p>
+                        <p><i class="fa-solid fa-check text-emerald-500 mr-1"></i> Disponible bajo pedido inmediato.</p>
+                    </div>
+
+                    <a href="${whatsappUrl}" target="_blank" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-3 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Pedir por WhatsApp</span>
+                    </a>
+                </div>
+            `;
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // Mobile Nav Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Initialize
+        renderProducts(products);
+    </script>
+</body>
+</html>
