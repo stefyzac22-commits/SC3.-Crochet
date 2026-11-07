@@ -1,2 +1,2 @@
-# SC3.-Crochet
+# SC3.Crochet
 El arte disfrutado a mano
